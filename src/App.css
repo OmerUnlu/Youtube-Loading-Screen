@@ -1,38 +1,274 @@
-.App {
-  text-align: center;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  width: 100%;
+  height: 100vh;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App{
+  display: flex;
+  background-color: #181818;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.sidebar{
+  background-color: #212121;
+  height: 100vh;
+  width: 5%;
+  position: sticky;
+  border-right: solid 1px #444;
+}
+.sidebarButtons{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 100vh;
+}
+.sidebarButtons div{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.sidebarButtons button{
+  background-color: #212121;
+  border: none;
+  color: rgb(190, 188, 188);
+  transition: all ease .3s;
+  margin: 10px 0 0px 0;
+  cursor: pointer;
+}
+.sidebarButtons button:hover{
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.sidebarButtons span{
+   color: rgb(190, 188, 188);
+}
+#homeIcon{
+  margin-left: 20px;
+  margin-bottom: 10px;
+  font-size: small;
+  font-weight: 700;
+}
+#exploreIcon{
+  margin-bottom: 20px;
+  margin-left: 18px;
+  font-size: small;
+  font-weight: 700;
+}
+#subIcon{
+  margin-left: 10px;
+  font-size: small;
+  font-weight: 700;
+}
+#menuIcon{
+  margin-bottom: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* TopBar CSS İşlemler */
+.MainContainer{
+  width: 100%;
+}
+.TopBar{
+  width: 100%;
+  height: 9vh;
+  background-color: #212121;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  border-bottom: solid 1px #444;
+}
+.topBarLeft{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 7vh;
+}
+.topBarLeft span{
+  font-weight: 600;
+  margin-top: -3px;
+}
+.youtubeIcon{
+  margin-left: 5px;
+}
+.topBarMiddle{
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: 9vh;
+}
+.middleInput{
+  padding-left: 10px;
+  font-size: medium;
+  background-color: #080808;
+  width: 90%;
+  height: 6vh;
+  color: white;
+  border: none;
+}
+.middleInput:focus{
+  outline: none;
+}
+.topBarMiddle button{
+  border: none;
+  background-color: #3c3939;
+  color: rgb(190, 188, 188);
+  width: 60px;
+  height: 5.6vh;
+  cursor: pointer;
+}
+.topBarMiddle button:hover{
+  color: white;
+  cursor: pointer;
+}
+
+.topBarRight{
+  display: flex;
+  padding-left: 15px;
+  color: rgb(190, 188, 188);
+  width: 15%;
+}
+.topBarRight svg{
+  margin-right: 15px;
+  font-size: xx-large;
+}
+.topBarRight svg:hover{
+  color: white;
+}
+.top-img{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: all ease 0.5s;
+}
+.top-img:hover{
+  width: 35px;
+  height: 35px;
+}
+
+/* Feed Css */
+.MainFeed{
+  height: 91vh;
+  padding: 25px 55px;
+}
+.feed-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Posts Css İşlemleri */
+.posts{
+  width: 285px;
+  margin-right: 50px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  position: relative;
+  transition: all ease 0.5s;
+}
+.posts:hover{
+  opacity: 0.7;
+  width: 295px;
+}
+.posts-img{
+  width: 100%;
+  height: 20vh;
+}
+.post-img{
+  width: inherit;
+}
+.post-duration{
+  background-color: #333;
+  position: absolute;
+  right: 10px;
+  top: 120px;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 2px 5px;
+  color: white;
+}
+.post-info{
+  display: flex;
+  padding: 5px 10px;
+}
+.post-avatar{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+  margin-top: 15px;
+}
+.post-content{
+  width: 100%;
+  margin-top: 15px;
+  display: flex;
+  color: white;
+  flex-direction: column;
+  font-size: 15px;
+}
+.post-title{
+  margin-bottom: 5px;
+}
+.post-chanel{
+  margin-bottom: 5px;
+}
+.post-detailed{
+  display: flex;
+  justify-content: space-between;
+}
+
+/* POST-SK CSS İŞLEMLERİ */
+
+.post-sk{
+  width: 285px;
+  height: 258px;
+  margin-right: 50px;
+  margin-bottom: 30px;
+  position: relative;
+  animation: skeleton 1s ease infinite alternate;
+}
+@keyframes skeleton{
+  to{
+    opacity: 0.5;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.post-sk-img{
+  height: 143px;
+  width: inherit;
+  background-color: #323232;
+}
+.post-sk-info{
+  display: flex;
+  height: 100px;
+}
+.post-sk-avatar{
+  background-color: #323232;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.post-sk-detail{
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.post-sk-text{
+  background-color: #323232;
+  width: 230px;
+  height: 30px;
+   border-radius: 5px;
+   margin-left: 10px;
+}
+.post-sk-text-sm{
+  background-color: #323232;
+  width: 150px;
+  height: 30px;
+   border-radius: 5px;
+   margin-left: 10px;
+   margin-top: 10px;
 }
