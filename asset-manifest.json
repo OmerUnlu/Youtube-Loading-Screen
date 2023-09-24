@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Youtube-Loading-Screen/static/css/main.52c2380a.css",
+    "main.js": "/Youtube-Loading-Screen/static/js/main.d6860a75.js",
+    "static/media/foto.jpg": "/Youtube-Loading-Screen/static/media/foto.f6845e6a7cb9099c1513.jpg",
+    "index.html": "/Youtube-Loading-Screen/index.html",
+    "main.52c2380a.css.map": "/Youtube-Loading-Screen/static/css/main.52c2380a.css.map",
+    "main.d6860a75.js.map": "/Youtube-Loading-Screen/static/js/main.d6860a75.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.52c2380a.css",
+    "static/js/main.d6860a75.js"
+  ]
+}
